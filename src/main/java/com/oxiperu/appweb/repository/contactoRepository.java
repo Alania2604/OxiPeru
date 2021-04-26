@@ -1,6 +1,6 @@
 package com.oxiperu.appweb.repository;
 
-public class ContactoRepository{
+public class contactoRepository{
 
     
 }
