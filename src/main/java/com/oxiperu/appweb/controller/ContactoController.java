@@ -1,7 +1,6 @@
 package com.oxiperu.appweb.controller;
 
 import com.oxiperu.appweb.model.contacto;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,10 +16,12 @@ public class ContactoController{
         return "contacto/index";
     }
 
-    @PostMapping("/contacto/create")
+   @PostMapping("/contacto/create")
     public String postSubmitForm(Model model){
+        contacto contacto =new contacto();
+        model.addAttribute("contacto", contacto);
         model.addAttribute("mensaje", "se registro un contacto");
-        return "contacto/index.html";
+        return "contacto/index";
     }
     
 }

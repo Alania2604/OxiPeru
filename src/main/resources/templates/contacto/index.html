@@ -1,7 +1,7 @@
 <html  xmlns:th="https://www.thymeleaf.org">
 <body>
         <h2>contacto</h2>
-        <form th:object="${contacto}" th:action= "@{/contacto/create}" method="post">
+        <form th:object="${contacto}" th:action="@{/contacto/create}" method="post">
             <div class="form-group has-feedback">
                 <input type="text" th:field="*{nombre}"/>
                 <input type="text" th:field="*{contraseña}"/>
@@ -14,13 +14,12 @@
                <button
                 th:with="text='Add contacto'"
                 class="btn btn-default" type="submit" th:text="${text}"> Add 
-                    contacto 
-                </button>
+                contacto </button>
 
             </div>
             </div>
         </form>
-        <p th:text="${mensaje}"/>
+        <p th:text="${mensaje}" />
 
 
 </body>
