@@ -20,7 +20,7 @@ public class ContactoController{
     public String postSubmitForm(Model model){
         contacto contacto =new contacto();
         model.addAttribute("contacto", contacto);
-        model.addAttribute("mensaje", "se registro un contacto");
+        model.addAttribute("mensaje", "Su registro fue exitoso");
         return "contacto/index";
     }
     
