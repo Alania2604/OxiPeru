@@ -16,8 +16,6 @@ public class Catalogo{
     }
     public BigDecimal getPrecio(){
      return this.precio;
-
-
     }
     public void setPrecio(BigDecimal precio){
         this.precio=precio;
