@@ -10,6 +10,9 @@ import com.oxiperu.appweb.model.Catalogo;
 
 @Controller
 public class CatalogoController{
-
+      public String index(){
+       System.out.println("Fin");
+        return "catalogo/index";
+      }
   
 }
