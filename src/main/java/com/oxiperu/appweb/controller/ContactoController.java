@@ -9,7 +9,7 @@ import org.springframework.ui.Model;
 @Controller
 public class ContactoController{
 
-    @GetMapping("/contacto")
+    @GetMapping("/")
     public String contacto(Model model){
         contacto contacto =new contacto();
         model.addAttribute("contacto", contacto);
