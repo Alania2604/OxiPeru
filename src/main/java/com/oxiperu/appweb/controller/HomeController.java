@@ -4,13 +4,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.ui.Model;
 
+
 @Controller
-public class ContactoController{
+public class HomeController {
+    
+    private static final String HOME_INDEX ="welcome"; 
 
-    private static final String INDEX ="contacto/create"; 
-
-    @GetMapping("/contacto/create")
+    @GetMapping("/")
     public String index(Model model) {
-        return INDEX;
-    }   
+        return HOME_INDEX;
+    }
+
 }
