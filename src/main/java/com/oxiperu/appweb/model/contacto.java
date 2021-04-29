@@ -34,6 +34,7 @@ public class contacto{
     private String telefono; 
     @NotNull
     private String razon; 
+    
 
 
     
