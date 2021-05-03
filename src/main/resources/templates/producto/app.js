@@ -2,18 +2,31 @@
 //espera que se lea todo el html y luego ejecute alguna funcion
 //capturamos datos
 //usar fragment evita reflow
+//usamos objetos por array
 
 const cards=document.getElementById('cards')
+const items=document.getElementById('items')
+const footer=document.getElementById('footer')
 const templateCard =document.getElementById('template-card').content 
+const templateFooter = document.getElementById('template-footer').content
+const templateCarrito = document.getElementById('template-carrito').content
 const fragment= document.createDocumentFragment()
+let carrito = {}
 
 document.addEventListener('DOMContentLoaded',()=>{
     fetchData()
+    if(localStorage.getItem('carrito')){
+        carrito = JSON.parse(localStorage.getItem('carrito'))
+        pintarCarrito()
+    }
 })
 cards.addEventListener('click', e=>{
    addCarrito(e)
 })
-let carrito={}
+items.addEventListener('click', e =>{
+    btnAccion(e)
+})
+
 
 const fetchData = async()=>{
     try{
@@ -25,9 +38,8 @@ const fetchData = async()=>{
         console.log(error)
     }
 }
-
 const pintarCards=data =>{
-    console.log(data)
+    //console.log(data)
     data.forEach(producto => {
         templateCard.querySelector('h5').textContent = producto.title
         templateCard.querySelector('p').textContent = producto.precio
@@ -46,8 +58,8 @@ const addCarrito=e =>{
     }
     e.stopPropagation()
 }
-const setCarrito=objeto =>{
-    console.log(objeto)
+const setCarrito = objeto =>{
+    //console.log(objeto)
     const producto={
         id: objeto.querySelector('.btn-dark').dataset.id,
         title: objeto.querySelector('h5').textContent,
@@ -59,6 +71,71 @@ const setCarrito=objeto =>{
     }
     //creando id
     carrito[producto.id]= {...producto}
+    pintarCarrito()
+}
+const pintarCarrito = () =>{
+    //console.log(carrito)
+    //inenrhtml para que no se repitan los items
+    items.innerHTML = ''
+    Object.values(carrito).forEach(producto =>{
+        templateCarrito.querySelector('th').textContent = producto.id
+        templateCarrito.querySelectorAll('td')[0].textContent = producto.title
+        templateCarrito.querySelectorAll('td')[1].textContent = producto.cantidad
+        templateCarrito.querySelector('.btn-info').dataset.id = producto.id
+        templateCarrito.querySelector('.btn-danger').dataset.id = producto.id
+        templateCarrito.querySelector('span').textContent = producto.cantidad * producto.precio
+        const clone = templateCarrito.cloneNode(true)
+        fragment.appendChild(clone)
+    })
+    items.appendChild(fragment)
+    pintarFooter()
+    //la coleccion de objetos pasa a un String plano
+    localStorage.setItem('carrito', JSON.stringify(carrito))
+}
+//cuando el carrito esta vacio vuelve a enviar el mensaje
+const pintarFooter = () =>{
+    footer.innerHTML = ''
+    if(Object.keys(carrito).length === 0){
+        footer.innerHTML = `
+        <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+        `
+        return
+    }
+    //para sumar el total, acumulando en reduce
+    const nCantidad = Object.values(carrito).reduce((acc, {cantidad}) => acc + cantidad,0)
+    const nPrecio = Object.values(carrito).reduce((acc, {cantidad, precio}) => acc + cantidad * precio,0)
 
-    console.log(producto)
+    templateFooter.querySelectorAll('td')[0].textContent = nCantidad
+    templateFooter.querySelector('span').textContent = nPrecio
+
+    const clone = templateFooter.cloneNode(true)
+    fragment.appendChild(clone)
+    footer.appendChild(fragment)
+
+    const btnVaciar =  document.getElementById('vaciar-carrito')
+    btnVaciar.addEventListener('click', () =>{
+        carrito = {}
+        pintarCarrito()
+    })
+}
+const btnAccion = e =>{
+    //console.log(e.target)
+    //accion para aumentar la cantidad del producto elegido
+    if(e.target.classList.contains('btn-info')){
+        console.log(carrito[e.target.dataset.id])
+        //carrito[e.target.dataset.id]
+        const producto = carrito[e.target.dataset.id]
+        producto.cantidad++
+        carrito[e.target.dataset.id] = {...producto}
+        pintarCarrito()
+    }
+    if(e.target.classList.contains('btn-danger')){
+        const producto = carrito[e.target.dataset.id]
+        producto.cantidad--
+        if(producto.cantidad === 0){
+            delete carrito[e.target.dataset.id]
+        }
+        pintarCarrito()
+    }
+    e.stopPropagation()
 }
