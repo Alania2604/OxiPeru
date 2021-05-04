@@ -1,5 +1,4 @@
 //content para acceder a los elementos
-//espera que se lea todo el html y luego ejecute alguna funcion
 //capturamos datos
 //usar fragment evita reflow
 //usamos objetos por array
@@ -11,8 +10,10 @@ const templateCard =document.getElementById('template-card').content
 const templateFooter = document.getElementById('template-footer').content
 const templateCarrito = document.getElementById('template-carrito').content
 const fragment= document.createDocumentFragment()
+// objeto vacio
 let carrito = {}
 
+//espera que se lea todo el html y luego ejecute alguna funcion (1)
 document.addEventListener('DOMContentLoaded',()=>{
     fetchData()
     if(localStorage.getItem('carrito')){
@@ -27,7 +28,7 @@ items.addEventListener('click', e =>{
     btnAccion(e)
 })
 
-
+//primero tiene que leer api, los datos seran en json (1)
 const fetchData = async()=>{
     try{
         const res= await fetch('api.json')
@@ -38,6 +39,7 @@ const fetchData = async()=>{
         console.log(error)
     }
 }
+// casilla de cada producto; forEach porque api esta en json, solo seran las casillas (2)
 const pintarCards=data =>{
     //console.log(data)
     data.forEach(producto => {
@@ -50,14 +52,17 @@ const pintarCards=data =>{
     })
     cards.appendChild(fragment)
 }
+// detecta los valores de cada casilla, solo añadimos el boton 1 vez para agregar al carrito (2)
 const addCarrito=e =>{
     //console.log(e.target)
     //console.log(e.target.classList.contains('btn-dark'))
     if(e.target.classList.contains('btn-dark')){
         setCarrito(e.target.parentElement)
     }
+    // para que solo se ejecute una funcion 
     e.stopPropagation()
 }
+// recibimos el objeto con todos los datos de la casilla al presionar el boton (3)
 const setCarrito = objeto =>{
     //console.log(objeto)
     const producto={
