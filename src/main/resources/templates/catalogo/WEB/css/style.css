@@ -134,20 +134,8 @@ ul {
     }
 }
 
-.icono1 {
-    background-image: url(../img/icono1.png);
-}
-.icono2 {
-    background-image: url(../img/icono2.png);
-}
-.icono3 {
-    background-image: url(../img/icono3.png);
-}
 
 
-.agregar-carrito{
-    margin: 10px 0;
-}
 .card {
     text-align: center;
     border: none solid rgba(255, 255, 255, 0.05);
