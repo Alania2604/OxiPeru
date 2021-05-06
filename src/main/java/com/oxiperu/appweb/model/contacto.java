@@ -18,22 +18,19 @@ import lombok.*;
 @Entity
 @Table(name = "t_contact")
 
-
-
-
 public class contacto{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
     @NotNull
-    private String nombre;
+    private String name;
     @NotNull
     private String email;
     @NotNull
-    private String telefono; 
+    private String phone; 
     @NotNull
-    private String razon; 
+    private String reason; 
     
 
 
