@@ -1,14 +1,11 @@
 package com.oxiperu.appweb.model;
 
+import javax.validation.constraints.NotNull;
 
-import javax.validation.contraints.NotNull;
-
-import jdk.nashorn.internal.objects.annotations.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-import java.lang.invoke.InjectedProfile;
 
 import javax.persistence.Id;
 import javax.persistence.GeneratedValue;

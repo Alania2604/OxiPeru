@@ -3,9 +3,6 @@ package com.oxiperu.appweb.model;
 import java.util.Date;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import jdk.nashorn.internal.objects.annotations.Getter;
-import jdk.nashorn.internal.objects.annotations.Setter;
-
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Id;
@@ -24,8 +21,6 @@ import lombok.*;
 @Builder
 @Entity
 @Table(name="t_customer")
-
-
 public class Cliente{
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -37,7 +32,4 @@ public class Cliente{
     @DateTimeFormat(pattern="dd/MM/yyyy")
     private Date birthdate; //fecha
     private String genero; //Radio
-    @OneToOne(fetch =FetchType.LAZY)
-    @JoinColumn(name="user_id")
-    private Usuario user;
 }
