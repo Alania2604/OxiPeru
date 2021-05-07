@@ -1,11 +1,11 @@
 package com.oxiperu.appweb.controller;
 
-import org.springframework.stereotype.controller;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.ui.model;
+import org.springframework.ui.Model;
 
 
-@controller
+@Controller
 public class HomeController{
 
     private static final String HOME_INDEX="welcome";
