@@ -1,8 +1,5 @@
 package com.oxiperu.appweb.model;
 
-
-
-
 import javax.validation.constraints.NotNull;
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -19,11 +16,7 @@ import lombok.*;
 @Entity
 @Table(name = "t_contact")
 
-
-
-
 public class contacto{
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
@@ -35,10 +28,6 @@ public class contacto{
     private String telefono; 
     @NotNull
     private String razon; 
-    
-
-
-
     
 }
    

@@ -15,3 +15,9 @@ public class UsuarioController {
         return INDEX;
     }  
 }
+
+public class UsuarioController{
+
+
+}
+

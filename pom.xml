@@ -15,11 +15,16 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
-
 		<webjars-bootstrap.version>4.6.0</webjars-bootstrap.version>
 		<webjars-jquery-ui.version>1.12.1</webjars-jquery-ui.version>
 		<webjars-jquery.version>3.6.0</webjars-jquery.version>
 		<font-awesome.version>5.15.2</font-awesome.version>		
+
+		<!--Web dependencies -->
+		<webjars-bootstrap.version>4.6.0</webjars-bootstrap.version>
+	    <webjars-jquery-ui.version>1.12.1</webjars-jquery-ui.version>
+	    <webjars-jquery.version>3.6.0</webjars-jquery.version>
+	    <font-awesome.version>5.15.2</font-awesome.version>
 	</properties>
 	<dependencies>
 <dependency>
@@ -39,12 +44,11 @@
 			<artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>
 
-		<!-- data-->
+		<!--data-->
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
+             <groupId>org.springframework.boot</groupId> 
+			 <artifactId>spring-boot-starter-data-jpa</artifactId> 
 		</dependency>
-
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
@@ -93,7 +97,6 @@
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
         </dependency>
-
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

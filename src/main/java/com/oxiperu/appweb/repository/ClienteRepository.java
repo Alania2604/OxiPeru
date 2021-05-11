@@ -1,15 +1,9 @@
 package com.oxiperu.appweb.repository;
 
-import com.oxiperu.appweb.model.contacto;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-
+import com.oxiperu.appweb.model.Cliente;
 @Repository
-
-public interface  contactoRepository extends JpaRepository<contacto, Integer>{
-
+public interface ClienteRepository extends JpaRepository<Cliente,Integer>{
 
 }
-
-
-    
