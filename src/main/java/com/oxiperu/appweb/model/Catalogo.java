@@ -1,6 +1,7 @@
 package com.oxiperu.appweb.model;
 import java.math.BigDecimal;
 public class Catalogo{
+    
     private long idCatalogo;
     private BigDecimal precio;
     private String nombre;

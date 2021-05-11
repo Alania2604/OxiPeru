@@ -18,6 +18,6 @@ import lombok.*;
 public class Usuario {
     @Id
         private String userID;
-    private String password;
+        private String password;
 
 }
