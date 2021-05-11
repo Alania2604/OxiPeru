@@ -3,36 +3,36 @@
     "precio": 500,
     "id": 1,
     "title": "Balon de Oxigeno 1",
-    "thumbnailUrl": "https://oxihouse.cl/catalogo/wp-content/uploads/2018/11/CILINDRO_DE_OXIG_54654f05db766_200x200.jpg"
+    "fig": "/src/public/img1.jpg"
   },
   {
     "precio": 300,
     "id": 2,
     "title": "Balon de Oxigeno 2",
-    "thumbnailUrl": "https://meditech.pe/wp-content/uploads/2020/04/520002-00003.jpg"
+    "fig": "/src/public/img2.jpg"
   },
   {
     "precio": 100,
     "id": 3,
     "title": "Balon de Oxigeno 3",
-    "thumbnailUrl": "http://www.kiarmedical.com/svc/get-img/productos-pro_218/300"
+    "fig": "/src/public/img3.jpg"
   },
   {
     "precio": 350,
     "id": 4,
     "title": "Balon de Oxigeno 4",
-    "thumbnailUrl": "http://www.jxvalverdemarin.com.pe/images/Vaso-Humidificador-Reutilizable-2.jpg"
+    "fig": "/src/public/img4.jpg"
   },
   {
     "precio": 1200,
     "id": 5,
     "title": "Balon de Oxigeno 5",
-    "thumbnailUrl": "https://www.indura.cl/content/storage/cl/producto/342968c10cfa429e9533807a2cd5a1c3.jpg"
+    "fig": "/src/public/img5.jpg"
   },
   {
     "precio": 150,
     "id": 6,
     "title": "Balon de Oxigeno 6",
-    "thumbnailUrl": "https://www.mundocervecero.com/wp-content/uploads/2019/04/Cilindro.jpg"
+    "fig": "/src/public/img6.jpg"
   }
 ]
