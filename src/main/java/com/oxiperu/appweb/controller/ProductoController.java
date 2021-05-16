@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import org.springframework.ui.Model;
 
-import com.oxiperu.appweb.model.Producto;
+//import com.oxiperu.appweb.model.Producto;
 
 @Controller
 public class ProductoController{
