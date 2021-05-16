@@ -8,29 +8,30 @@ import org.springframework.ui.Model;
 
 import javax.validation.Valid;
 
-import com.oxiperu.appweb.model.contacto;
-import com.oxiperu.appweb.repository.contactoRepository;
+import com.oxiperu.appweb.model.Contacto;
+import com.oxiperu.appweb.repository.ContactoRepository;
 
 @Controller
-public class ContactoController{
+
+public class ContactoController {
 
     private static final String INDEX ="contacto/create"; 
     private static String MODEL_CONTACT="contact";
-    private final contactoRepository contactsData;
+    private final ContactoRepository contactsData;
 
-    public ContactoController(contactoRepository contactsData){
+    public ContactoController(ContactoRepository contactsData){
         this.contactsData = contactsData;
     }    
 
     @GetMapping("/contacto/create")
     public String index(Model model) {
-        model.addAttribute(MODEL_CONTACT, new contacto());
+        model.addAttribute(MODEL_CONTACT, new Contacto());
         return INDEX;
     }  
     
     @PostMapping("/contacto/create")
     public String createSubmitForm(Model model, 
-        @Valid contacto objContact, BindingResult result ){
+        @Valid Contacto objContact, BindingResult result ){
         if(result.hasFieldErrors()) {
             model.addAttribute("mensaje", "No se registro un contacto");
         }else{
@@ -40,5 +41,7 @@ public class ContactoController{
         }
         return INDEX;
     }
-   
+
+
+    
 }

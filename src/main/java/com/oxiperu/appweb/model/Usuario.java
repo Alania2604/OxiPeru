@@ -19,4 +19,5 @@ public class Usuario {
     @Column(name = "user_id")
     private String userID;
     private String password;
+
 }
