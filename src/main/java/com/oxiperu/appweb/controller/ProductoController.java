@@ -21,43 +21,44 @@ public class ProductoController {
     private static final String VIEW_EDIT="producto/edit"; 
     private static String MODEL_PRODUCTO="producto";
 
-    public ProductoController(ProductoRepository productsData
-        ){
+    public ProductoController(ProductoRepository productsData){
         this.productsData = productsData;
-        
     }
+
     @GetMapping("/producto/index")
     public String index(Model model){
         List<Producto> listProducto = this.productsData.findAll();
         model.addAttribute("productos",listProducto);
         return VIEW_INDEX;
     }
+
     @GetMapping("/producto/create")
     public String create(Model model) {
         model.addAttribute(MODEL_PRODUCTO, new Producto());
         return VIEW_CREATE;
-    }
+    }    
+
     @PostMapping("/producto/create")
     public String createSubmitForm(Model model, 
         @Valid Producto objProducto, BindingResult result ){
         if(result.hasFieldErrors()) {
-            model.addAttribute("mensaje", "No se registro un Producto");
+            model.addAttribute("mensaje", "No se registro un Producto");   
+        }else{
+            objProducto.setStatus("A");
+            this.productsData.save(objProducto);
+            model.addAttribute(MODEL_PRODUCTO, objProducto);
+            model.addAttribute("mensaje", "Se registro un Producto");
         }
-        //else{
-            //objProducto.setStatus("A");
-            //this.productsData.save(objProducto);
-            //model.addAttribute(MODEL_PRODUCTO, objProducto);
-            //model.addAttribute("mensaje", "Se registro un Producto");
-        //}
         return VIEW_CREATE;
-    }
+
     @GetMapping("/producto/edit/{id}")
     public String edit(@PathVariable("id") int id, 
         Model model){
         Producto producto = this.productsData.getOne(id);
         model.addAttribute(MODEL_PRODUCTO, producto);
         return VIEW_EDIT;
-    }
+        }  
+
     @PostMapping("/producto/edit")
 	public String update(
 			@Valid Producto objProducto,
@@ -68,5 +69,3 @@ public class ProductoController {
 		}
 		this.productsData.save(objProducto);
 		return VIEW_INDEX;
-	}      
-}

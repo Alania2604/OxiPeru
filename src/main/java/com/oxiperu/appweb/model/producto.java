@@ -7,9 +7,14 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+
+import java.math.BigDecimal;
+import java.util.Date;
 import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import lombok.*;
 
@@ -22,8 +27,9 @@ import lombok.*;
 @Table(name = "t_product")
 
 public class Producto{
+
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     //private String descripcion;
     //private BigDecimal precio;
