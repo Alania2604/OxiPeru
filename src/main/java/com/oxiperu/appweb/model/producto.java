@@ -1,15 +1,10 @@
 package com.oxiperu.appweb.model;
 
-import java.util.Date;
 //import java.math.BigDecimal;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-
-import java.math.BigDecimal;
-import java.util.Date;
 import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -26,8 +21,7 @@ import lombok.*;
 @Entity
 @Table(name = "t_product")
 
-public class Producto{
-
+public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -37,5 +31,4 @@ public class Producto{
     private Date dueDate;
     //private String imageFileName;
     //private String status;
-
 }
