@@ -16,7 +16,7 @@ import lombok.*;
 @Entity
 @Table(name = "t_contact")
 
-public class contacto{
+public class Contacto{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
