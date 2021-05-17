@@ -46,11 +46,11 @@ public class ProductoController {
         @Valid Producto objProducto, BindingResult result ){
         if(result.hasFieldErrors()) {
             model.addAttribute("mensaje", "No se registro un Producto");
-        //}else{
-            //objProducto.setStatus("A");
-            //this.productsData.save(objProducto);
-            //model.addAttribute(MODEL_PRODUCTO, objProducto);
-            //model.addAttribute("mensaje", "Se registro un Producto");
+        }else{
+            objProducto.setStatus("A");
+            this.productsData.save(objProducto);
+            model.addAttribute(MODEL_PRODUCTO, objProducto);
+            model.addAttribute("mensaje", "Se registro un Producto");
         }
         return VIEW_CREATE;
     }

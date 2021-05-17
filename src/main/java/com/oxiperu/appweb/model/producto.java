@@ -1,6 +1,6 @@
 package com.oxiperu.appweb.model;
 
-//import java.math.BigDecimal;
+import java.math.BigDecimal;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -25,10 +25,10 @@ public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    //private String descripcion;
-    //private BigDecimal precio;
+    private String descripcion;
+    private BigDecimal precio;
     @Temporal(TemporalType.DATE)
     private Date dueDate;
-    //private String imageFileName;
-    //private String status;
+    private String imageFileName;
+    private String status;
 }
