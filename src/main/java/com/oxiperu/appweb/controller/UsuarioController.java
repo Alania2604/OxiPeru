@@ -1,5 +1,4 @@
 package com.oxiperu.appweb.controller;
-
 import java.util.Optional;
 
 import javax.validation.Valid;
@@ -14,7 +13,6 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 
 @Controller
-
 public class UsuarioController {
     private static final String INDEX ="usuario/login"; 
     private static String MODEL_CONTACT="user";
