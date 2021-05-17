@@ -23,7 +23,7 @@
           <tbody>
             <tr th:each="producto : ${productos}">
               <td>
-                <img class="img-responsive" src="../static/resources/catalogo/${producto.imageFileName}"  th:src="@{'/resources/catalogo/'+${producto.imageFileName}}"/>
+                <img src="https://lh3.googleusercontent.com/proxy/0Avfk1yutav6WFTOQFiYWyvN2rwilrTpp4fJnFPveRX3cE5bItq-ym3GiReBprIVQM3-5vKJpFaUR6tgobYjk-gml1jq48qjmf7H1EaaiX1zsS_jkyDqmep9CjkPtArXT_HSiqdvdn6Cr80lE_eFXC6aX4-jpOpikEc">
                 <p th:text="${producto.descripcion}" />
                 <p th:text="${producto.precio}" />
                 <a th:href="@{'/catalogo/add/__${producto.id}__'}"
