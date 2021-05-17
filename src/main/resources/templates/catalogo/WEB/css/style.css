@@ -1,18 +1,40 @@
 body {
-    background-color: #17181b;
+    background-color:white;
+    
+
 }
 h1 {
     text-align: center;
-    color: white;
+    color: rgb(37, 122, 29);
+    flex: 3;
+    font-size: 100px;
 }
+.tienda{
+text-align: center;
+
+}
+
 h4 {
     font-size: 16px;
     font-weight: 700;
+    padding-left: 50px;
+    padding-top: 10px;
+    display: block;
+    position: relative;
+
+    
 }
-header {
-    padding: 20px 0 0 0;
-    background: #1d2124;
+
+h4 img{
+  padding-right: 80px;
+  float: right;
+}
+header{
+    padding: 0 0 10;
+    background: #7a9485;
     text-align: center;
+    font-size: 50px;
+    clear: left;
 }
 
 @media (min-width : 750px) {
@@ -21,15 +43,7 @@ header {
     }
 }
 
-.borrar-platilo {
-    background-color: #fbaf32;
-    border-radius: 50%;
-    padding: 5px 10px;
-    text-decoration: none;
-    color:rgb(71, 71, 71);
-    font-weight: bold;
 
-}
 
 ul {
     list-style: none;
@@ -67,8 +81,8 @@ ul {
     color: rgb(255, 255, 255);
 }
 .button {
-    background-color: #fbaf32;
-    color: rgb(255, 255, 255);
+    background-color: #aaa8a5;
+    color: rgb(0, 0, 0);
 }
 .contenido-hero {
     margin-top: 80px;
@@ -120,26 +134,13 @@ ul {
     }
 }
 
-.icono1 {
-    background-image: url(../img/icono1.png);
-}
-.icono2 {
-    background-image: url(../img/icono2.png);
-}
-.icono3 {
-    background-image: url(../img/icono3.png);
-}
 
-#lista-platillos .row {
-    margin-bottom: 20px;
-}
-.agregar-carrito{
-    margin: 10px 0;
-}
+
 .card {
     text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    background: #1d2124;
+    border: none solid rgba(255, 255, 255, 0.05);
+    background: white;
+    padding-left: 45px;
 }
 @media (min-width:550px){
     .card {
@@ -148,17 +149,13 @@ ul {
 }
 .info-card {
     padding: 10px 20px;
-    color: white;
+    color: black;
 }
 .info-card p,
 .card h4 {
     margin-bottom: 5px;
 }
-.info-card .precio {
-    text-decoration: line-through;
-    font-size: 18px;
-    margin-top: 10px;
-}
+
 .info-card .precio span {
     font-weight: 700;
     font-size: 22px;
