@@ -19,7 +19,7 @@ import lombok.*;
 @Builder
 @Entity
 @Table(name = "t_product")
-public class Producto{
+public class Productos{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
