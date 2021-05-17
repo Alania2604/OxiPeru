@@ -1,4 +1,5 @@
 package com.oxiperu.appweb.model;
+
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -19,8 +20,8 @@ import lombok.*;
 @Builder
 @Entity
 @Table(name = "t_product")
-public class Producto{
 
+public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -30,5 +31,9 @@ public class Producto{
     private Date dueDate;
     private String imageFileName;
     private String status;
+<<<<<<< HEAD
    
 }
+=======
+}
+>>>>>>> 4d5aa59e76b1c131efa13e808735b1da0db9125a
