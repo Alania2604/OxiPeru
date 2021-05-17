@@ -1,4 +1,5 @@
 package com.oxiperu.appweb.model;
+
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -19,7 +20,9 @@ import lombok.*;
 @Builder
 @Entity
 @Table(name = "t_product")
-public class Productos{
+
+public class Producto{
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
