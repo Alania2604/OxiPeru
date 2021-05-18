@@ -24,10 +24,8 @@ public class ProductoController {
     private final ProductoRepository productsData;
     
 
-    public ProductoController(ProductoRepository productsData
-        ){
-        this.productsData = productsData;
-        
+    public ProductoController(ProductoRepository productsData){
+        this.productsData = productsData;       
     }      
 
     @GetMapping("/producto/index")

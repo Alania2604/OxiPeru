@@ -21,8 +21,7 @@ import lombok.*;
 @Entity
 @Table(name = "t_product")
 
-public class Producto{
-
+public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -32,5 +31,6 @@ public class Producto{
     private Date dueDate;
     private String imageFileName;
     private String status;
-   
+
 }
+
