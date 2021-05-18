@@ -29,10 +29,7 @@ public class Contacto {
     @NotNull
     private String phone; 
     @NotNull
-<<<<<<< HEAD:src/main/java/com/oxiperu/appweb/model/Contacto.java
     private String reason;
     
-=======
-    private String reason; 
->>>>>>> eca2a6f659ede8cf9404b1ac1f4b4a7fffbaf726:src/main/java/com/oxiperu/appweb/model/contacto.java
 }
+
