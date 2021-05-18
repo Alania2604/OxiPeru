@@ -3,7 +3,7 @@ package com.oxiperu.appweb.model;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Id;
-
+import javax.persistence.Column;
 
 import lombok.*;
 
@@ -14,10 +14,11 @@ import lombok.*;
 @Builder
 @Entity
 @Table(name = "t_user")
-
 public class Usuario {
+   
     @Id
-        private String userID;
-        
+    @Column(name = "user_id")
+    private String userID;
+    private String password;
 
 }

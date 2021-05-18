@@ -31,6 +31,15 @@ public class Producto {
     private Date dueDate;
     private String imageFileName;
     private String status;
+<<<<<<< HEAD
 
 }
 
+=======
+<<<<<<< HEAD
+   
+}
+=======
+}
+>>>>>>> 4d5aa59e76b1c131efa13e808735b1da0db9125a
+>>>>>>> eca2a6f659ede8cf9404b1ac1f4b4a7fffbaf726
