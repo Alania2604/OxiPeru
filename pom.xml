@@ -15,7 +15,8 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
-<!-- Web dependencies -->
+
+		<!-- Web dependencies -->
 		<webjars-bootstrap.version>4.6.0</webjars-bootstrap.version>
 		<webjars-jquery-ui.version>1.12.1</webjars-jquery-ui.version>
 		<webjars-jquery.version>3.6.0</webjars-jquery.version>
@@ -101,6 +102,7 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
 	
 	<build>
 		<plugins>
