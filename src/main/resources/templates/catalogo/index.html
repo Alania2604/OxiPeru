@@ -173,7 +173,7 @@
           <tbody>
             <tr th:each="producto : ${productos}">
               <td>
-                <img class="img-responsive" src="../static/resources/catalogo/${producto.imageFileName}"  th:src="@{'/resources/catalogo/'+${producto.imageFileName}}"/>
+                <img src="https://i0.wp.com/sypsa.mx/wp-content/uploads/2016/09/cilindro4.jpg?fit=500%2C500&ssl=1">
                 <p th:text="${producto.descripcion}" />
                 <p th:text="${producto.precio}" />
                 <a th:href="@{'/catalogo/add/__${producto.id}__'}"
