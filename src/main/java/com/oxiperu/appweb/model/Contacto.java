@@ -29,7 +29,36 @@ public class Contacto {
     @NotNull
     private String phone; 
     @NotNull
+<<<<<<< HEAD:src/main/java/com/oxiperu/appweb/model/Contacto.java
     private String reason;
+=======
+    private String reason; 
+
+    public String getName(){
+        return name;
+    }
+    public void setName(String name){
+        this.name=name;
+    }
+    public String getEmail(){
+        return email;
+    }
+    public void setEmail(String email){
+        this.email=email;
+    }
+    public String getPhone(){
+        return phone;
+    }
+    public void setPhone(String phone){
+        this.phone=phone;
+    }
+    public String getReason(){
+        return reason;
+    }
+    public void setReason(String reason){
+        this.reason=reason;
+    }
+>>>>>>> 6fb763e1f02d309575806a3ec4730b6bb69d4f1c:src/main/java/com/oxiperu/appweb/model/contacto.java
     
 }
 
