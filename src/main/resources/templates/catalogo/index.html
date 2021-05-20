@@ -23,7 +23,7 @@
           <tbody>
             <tr th:each="producto : ${productos}">
               <td>
-                <img src="https://lh3.googleusercontent.com/proxy/0Avfk1yutav6WFTOQFiYWyvN2rwilrTpp4fJnFPveRX3cE5bItq-ym3GiReBprIVQM3-5vKJpFaUR6tgobYjk-gml1jq48qjmf7H1EaaiX1zsS_jkyDqmep9CjkPtArXT_HSiqdvdn6Cr80lE_eFXC6aX4-jpOpikEc">
+                <img src="https://i0.wp.com/sypsa.mx/wp-content/uploads/2016/09/cilindro4.jpg?fit=500%2C500&ssl=1">
                 <p th:text="${producto.descripcion}" />
                 <p th:text="${producto.precio}" />
                 <a th:href="@{'/catalogo/add/__${producto.id}__'}"
