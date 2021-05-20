@@ -9,7 +9,9 @@ import org.springframework.ui.Model;
 import javax.validation.Valid;
 
 import com.oxiperu.appweb.model.Contacto;
+
 import com.oxiperu.appweb.repository.ContactoRepository;
+
 
 @Controller
 
@@ -17,9 +19,11 @@ public class ContactoController {
 
     private static final String INDEX ="contacto/create"; 
     private static String MODEL_CONTACT="contact";
+
     private final ContactoRepository contactsData;
 
     public ContactoController(ContactoRepository contactsData){
+
         this.contactsData = contactsData;
     }    
 
