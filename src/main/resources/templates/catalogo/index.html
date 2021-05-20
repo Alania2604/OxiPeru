@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -148,9 +148,9 @@
 </footer>
 </body>
 </form>
-=======
 
-<html xmlns:th="https://www.thymeleaf.org" 
+<!--
+</html>html xmlns:th="https://www.thymeleaf.org" 
     th:replace="~{fragments/layout :: layout (~{::body},'catalogo')}">
 
 <head>
@@ -173,7 +173,7 @@
           <tbody>
             <tr th:each="producto : ${productos}">
               <td>
-                <img src="https://i0.wp.com/sypsa.mx/wp-content/uploads/2016/09/cilindro4.jpg?fit=500%2C500&ssl=1">
+                <img class="img-responsive" src="../static/resources/catalogo/${producto.imageFileName}"  th:src="@{'/resources/catalogo/'+${producto.imageFileName}}"/>
                 <p th:text="${producto.descripcion}" />
                 <p th:text="${producto.precio}" />
                 <a th:href="@{'/catalogo/add/__${producto.id}__'}"
@@ -189,5 +189,5 @@
 
 </body>
 
->>>>>>> 85fa2ec38357bbe6cad5928a60042ec8af434604
 </html>
+-->
