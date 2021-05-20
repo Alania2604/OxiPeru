@@ -31,7 +31,7 @@ public class Producto {
     private Date dueDate; //-------------------------
     private String imageFileName;
     private String status;
-/*
+
    public String getDescripcion() {
         return descripcion;
     }
@@ -56,6 +56,6 @@ public class Producto {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
-*/
+
 }
 
