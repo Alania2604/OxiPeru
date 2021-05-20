@@ -1,61 +1,8 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6fb763e1f02d309575806a3ec4730b6bb69d4f1c
 
 <html xmlns:th="https://www.thymeleaf.org" 
     th:replace="~{fragments/layout :: layout (~{::body},'producto')}">
 
-<<<<<<< HEAD
-<head>
-  <title>Producto</title>
-  <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
-  <link th:rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css} " />
-  <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
-  <script th:src="@{/webjars/jquery-ui/jquery-ui.min.js}"></script>
-  <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
-</head>
-
-<body>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-10 mt-5 mb-5">
-        <h2>Contacts</h2><br/>
-        <a href="/producto/create">Create</a>
-        <table id="example" class="table table-bordered table-responsive" style="width: 100%">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Descripcion</th>
-              <th>Precio</th>
-              <th>Image</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr th:each="producto : ${productos}">
-              <td>
-                <a th:href="@{'/producto/edit/__${producto.id}__'}"
-  			           class="btn btn-info" role="button">Edit</a>
-              </td>
-              <td th:text="${producto.descripcion}"></td>
-              <td th:text="${producto.precio}"></td>
-              <td th:text="${producto.imageFileName}"></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-
-
-</body>
-
-=======
-<html lang="en">
-=======
->>>>>>> 6fb763e1f02d309575806a3ec4730b6bb69d4f1c
 <head>
   <title>Producto</title>
   <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
@@ -99,9 +46,5 @@
 
 
 </body>
-<<<<<<< HEAD
->>>>>>> 85fa2ec38357bbe6cad5928a60042ec8af434604
-=======
 
->>>>>>> 6fb763e1f02d309575806a3ec4730b6bb69d4f1c
 </html>
