@@ -28,9 +28,37 @@ public class Producto {
     private String descripcion;
     private BigDecimal precio;
     @Temporal(TemporalType.DATE)
-    private Date dueDate;
+    private Date dueDate; //-------------------------
     private String imageFileName;
     private String status;
+<<<<<<< HEAD
    
+=======
+    
+    public String getDescripcion() {
+        return descripcion;
+    }
+    public String getStatus() {
+        return status;
+    }
+    public void setStatus(String status) {
+        this.status = status;
+    }
+    public String getImageFileName() {
+        return imageFileName;
+    }
+    public void setImageFileName(String imageFileName) {
+        this.imageFileName = imageFileName;
+    }
+    public BigDecimal getPrecio() {
+        return precio;
+    }
+    public void setPrecio(BigDecimal precio) {
+        this.precio = precio;
+    }
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+>>>>>>> 6fb763e1f02d309575806a3ec4730b6bb69d4f1c
 }
 
