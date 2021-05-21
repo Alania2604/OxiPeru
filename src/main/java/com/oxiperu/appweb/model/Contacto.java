@@ -29,7 +29,6 @@ public class Contacto {
     @NotNull
     private String phone; 
     @NotNull
-
     private String reason; 
 
     public String getName(){
