@@ -33,6 +33,8 @@ public class Proforma {
     private Producto product;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
+    @Temporal(TemporalType.DATE)
+    private Date dueDate;
     private Usuario user;
     private BigDecimal precio;
     private Integer cantidad;
