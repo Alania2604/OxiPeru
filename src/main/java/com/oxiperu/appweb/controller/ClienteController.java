@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 
 import com.oxiperu.appweb.model.Cliente;
+import com.oxiperu.appweb.model.Usuario;
 import com.oxiperu.appweb.repository.ClienteRepository;
 import com.oxiperu.appweb.repository.UsuarioRepository;
 
@@ -36,7 +37,10 @@ public class ClienteController {
         if(result.hasFieldErrors()) {
             model.addAttribute("mensaje", "No se registro un cliente");
         }else{
-            this.usuariosData.save(objCliente.getUser());
+        
+            Usuario user = objCliente.getUser();
+            user.setTipoUsuario("C");
+            this.usuariosData.save(user);
             this.usuariosData.flush();
             this.clientsData.save(objCliente);
             model.addAttribute(MODEL_CONTACT, objCliente);
