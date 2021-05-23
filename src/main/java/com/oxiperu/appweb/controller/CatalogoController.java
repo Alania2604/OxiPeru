@@ -49,9 +49,9 @@ public class CatalogoController{
             if(!item.isPresent()){
                 Proforma itemCarrito = new Proforma();
                 itemCarrito.setCantidad(1);
-                //itemCarrito.setUser(user);
+                itemCarrito.setUser(user);
                 itemCarrito.setPrecio(productSeleccionado.getPrecio());
-                //itemCarrito.setProduct(productSeleccionado);
+                itemCarrito.setProduct(productSeleccionado);
                 proformaData.save(itemCarrito);
                 model.addAttribute("mensaje", "Se agrego el producto al carrito");
             }else{

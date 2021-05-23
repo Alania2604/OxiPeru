@@ -32,30 +32,7 @@ public class Producto {
     private String imageFileName;
     private String status;
 
-   public String getDescripcion() {
-        return descripcion;
-    }
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-    public String getStatus() {
-        return status;
-    }
-    public void setStatus(String status) {
-        this.status = status;
-    }
-    public String getImageFileName() {
-        return imageFileName;
-    }
-    public void setImageFileName(String imageFileName) {
-        this.imageFileName = imageFileName;
-    }
-    public BigDecimal getPrecio() {
-        return precio;
-    }
-    public void setPrecio(BigDecimal precio) {
-        this.precio = precio;
-    }
+  
     
 
 }
