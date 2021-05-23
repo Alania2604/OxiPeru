@@ -35,6 +35,9 @@ public class Producto {
    public String getDescripcion() {
         return descripcion;
     }
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
     public String getStatus() {
         return status;
     }
@@ -53,9 +56,7 @@ public class Producto {
     public void setPrecio(BigDecimal precio) {
         this.precio = precio;
     }
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
+    
 
 }
 
