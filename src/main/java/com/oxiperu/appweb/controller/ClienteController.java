@@ -36,7 +36,7 @@ public class ClienteController {
         if(result.hasFieldErrors()) {
             model.addAttribute("mensaje", "No se registro un cliente");
         }else{
-            //this.usuariosData.save(objCliente.getUser());
+            this.usuariosData.save(objCliente.getUser());
             this.usuariosData.flush();
             this.clientsData.save(objCliente);
             model.addAttribute(MODEL_CONTACT, objCliente);
