@@ -20,13 +20,13 @@
       <div class="col">
         <div id="products" class="mb-3">
           <div class="row">
-            <div th:each="producto : ${products}" class="col-sm-4">
+            <div th:each="producto : $productos{}" class="col-sm-4">
               <div class="card mb-3">
                 <div class="card-body">
                   <div class="card-img-actions">
                     <img class="img-responsive" alt="${producto.descripcion}" width="96" height="150"
-                      src="/src/main/resources/static/resources/catalogo/${producto.imageFileName}"
-                      th:src="@{'/resources/catalogo/'+${producto.imageFileName}}" />
+                      src=" ../../static/resources/catalogo/${producto.imageFileName} "
+                      th:src="@{'../../resources/catalogo/'+${producto.imageFileName}}" />
                   </div>
                 </div>
                 <div class="card-body">
@@ -42,8 +42,12 @@
       </div>
     </div>
   </div>
-  <!--<img src="/src/main/resources/static/resources/catalogo/img2.jpg" alt="">-->
+
 
 </body>
 
 </html>
+
+
+  <!--<img src="/src/main/resources/static/resources/catalogo/img2.jpg" alt="">-->
+
