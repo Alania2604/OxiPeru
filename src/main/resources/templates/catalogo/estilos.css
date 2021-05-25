@@ -1,0 +1,14 @@
+
+body{
+background-color:brown;
+}
+.container{
+    float: right;
+    align-content: center;
+    padding-left: 30px;
+}
+ .img{
+     align-items: center;
+     border: auto;
+      
+ }
