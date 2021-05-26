@@ -24,7 +24,7 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/">Inicio<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/contacto/create">Contactenos</a>
@@ -42,13 +42,14 @@
             </th:block>
           </ul>
           <form class="form-inline" th:action="@{/catalogo/index}" method="get">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="searchName">
+            <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search" name="searchName">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
           </form>
           <ul class="nav navbar-nav navbar-right">
             <th:block th:if="${session.user==null}">
-              <li><a href="/cliente/create"><span class="glyphicon glyphicon-user"></span>Registrar</a></li>
-              <li><a href="/usuario/login"><span class="glyphicon glyphicon-log-in"></span>Iniciar sesión</a></li>
+              <li class="nav-item"><a class="nav-link" href="/cliente/create"><span class="glyphicon glyphicon-user"></span>Registrar</a></li><hr>
+              
+              <li class="nav-item"><a class="nav-link" href="/usuario/login"><span class="glyphicon glyphicon-log-in"></span>Iniciar sesión</a></li>
             </th:block>   
             <th:block th:if="${session.user!=null}">
               <li><a href="/usuario/logout"><span class="glyphicon glyphicon-log-in"></span>Salir</a></li>
