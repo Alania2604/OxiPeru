@@ -24,7 +24,7 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/contacto/create">Contact</a>
@@ -47,8 +47,8 @@
       </form>
       <ul class="nav navbar-nav navbar-right">
         <th:block th:if="${session.user==null}">
-          <li><a href="/cliente/create"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
-          <li><a href="/usuario/login"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="/cliente/create"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+          <li class="nav-item"><a class="nav-link" href="/usuario/login"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
         </th:block>   
         <th:block th:if="${session.user!=null}">
           <li><a href="/usuario/logout"><span class="glyphicon glyphicon-log-in"></span>Logout</a></li>

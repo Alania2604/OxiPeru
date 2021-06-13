@@ -37,19 +37,4 @@ public class Proforma {
     private BigDecimal precio;
     private Integer cantidad;
     
-    public BigDecimal getPrecio() {
-        return precio;
-    }
-    public Integer getCantidad() {
-        return cantidad;
-    }
-    public void setCantidad(Integer cantidad) {
-        this.cantidad = cantidad;
-    }
-    public void setPrecio(BigDecimal precio) {
-        this.precio = precio;
-    }  
-    
-
-    
 }
