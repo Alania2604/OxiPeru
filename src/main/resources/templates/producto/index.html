@@ -18,21 +18,21 @@
     <div class="row">
       <div class="col-lg-10 mt-5 mb-5">
         <h2>Productos</h2><br/>
-        <a href="/producto/create">Create</a>
+        <a href="/producto/create">Crear Producto</a>
         <table id="example" class="table table-bordered table-responsive" style="width: 100%">
           <thead>
             <tr>
               <th>#</th>
               <th>Descripcion</th>
               <th>Precio</th>
-              <th>Image</th>
+              <th>Imagen</th>
             </tr>
           </thead>
           <tbody>
             <tr th:each="producto : ${productos}">
               <td>
                 <a th:href="@{'/producto/edit/__${producto.id}__'}"
-  			           class="btn btn-info" role="button">Edit</a>
+  			           class="btn btn-info" role="button">Editar</a>
               </td>
               <td th:text="${producto.descripcion}"></td>
               <td th:text="${producto.precio}"></td>

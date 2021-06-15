@@ -21,17 +21,17 @@
         <table id="example" class="table table-bordered table-responsive" style="width: 100%">
           <thead>
             <tr>
-              <th>#</th>
-              <th>Id</th>
-              <th>Fecha</th>
-              <th>Total</th>
+            <center><th>Detalle</th></center>
+            <center><th>Id</th></center>
+            <center><th>Fecha</th></center>
+            <center><th>Total</th></center>
             </tr>
           </thead>
           <tbody>
             <tr th:each="pedido : ${pedidos}">
                 <td>
                   <a th:href="@{'/pedido/view/__${pedido.id}__'}"
-                     class="btn btn-info" role="button">View</a>
+                     class="btn btn-info" role="button">Ver</a>
                 </td>
                 <td th:text="${pedido.id}"></td>
                 <td th:text="${pedido.orderDate}"></td>
