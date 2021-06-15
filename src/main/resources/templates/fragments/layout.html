@@ -38,13 +38,16 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/proforma/index">Carrito</a>
-          </li>                
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" href="/pedido/index">Pedido</a>
+          </li>              
         </th:block>
+        <form class="form-inline" th:action="@{/catalogo/index}" method="get">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="searchName">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+        </form>
       </ul>
-      <form class="form-inline" th:action="@{/catalogo/index}" method="get">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="searchName">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
       <ul class="nav navbar-nav navbar-right">
         <th:block th:if="${session.user==null}">
           <li class="nav-item"><a class="nav-link" href="/cliente/create"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
@@ -65,7 +68,7 @@
         <div class="container">
           <div class="row">
             <div class="col-12 text-center">
-              Copyright @ 2021 SoftTech - UTP
+              Copyright @ 2021 Oxiperu 
           </div>
         </div>
       </div>
