@@ -1,0 +1,178 @@
+body {
+    background-color:white;
+    
+
+}
+h1 {
+    text-align: center;
+    color: rgb(37, 122, 29);
+    flex: 3;
+    font-size: 100px;
+}
+.tienda{
+text-align: center;
+
+}
+
+h4 {
+    font-size: 16px;
+    font-weight: 700;
+    padding-left: 50px;
+    padding-top: 10px;
+    display: block;
+    position: relative;
+
+    
+}
+
+h4 img{
+  padding-right: 80px;
+  float: right;
+}
+header{
+    padding: 0 0 10;
+    background: #7a9485;
+    text-align: center;
+    font-size: 50px;
+    clear: left;
+}
+
+@media (min-width : 750px) {
+    header {
+        text-align: left;
+    }
+}
+
+
+
+ul {
+    list-style: none;
+}
+
+.hero {
+    background-image: url(../img/hero.jpg);
+    height: 551px;
+}
+.encabezado {
+    margin: 30px 0;
+    color: white;
+}
+.submenu {
+    position: relative;
+}
+.submenu #carrito{
+    display: none;
+}
+.submenu:hover #carrito{
+    display: block;
+    color: white;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 1;
+    background: #17181b;
+    padding: 20px;
+}
+.vacio {
+    padding: 10px;
+    background-color: #fbaf32;
+    text-align: center;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+}
+.button {
+    background-color: #aaa8a5;
+    color: rgb(0, 0, 0);
+}
+.contenido-hero {
+    margin-top: 80px;
+    color: white;
+}
+.contenido-hero form {
+    position: relative;
+    margin-bottom: 0;
+}
+.contenido-hero form #buscador {
+    height: 50px;
+    margin-bottom: 0;
+}
+.contenido-hero form .submit-buscador {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    padding: 0;
+    display: block;
+    text-indent: -9999px;
+    width: 50px;
+    background-image: url(../img/lupa.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+.barra {
+    padding: 20px 0;
+    background: #fbaf32;
+    background: -webkit-linear-gradient(left, #b95a00 0%,#ad5400 100% );
+}
+.barra p {
+    margin: 0;
+    color: white;
+}
+.icono {
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 60px;
+    background-size: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+@media (min-width: 750px) {
+    .icono {
+        margin-bottom: 0;
+    }
+}
+
+
+
+.card {
+    text-align: center;
+    border: none solid rgba(255, 255, 255, 0.05);
+    background: white;
+    padding-left: 45px;
+}
+@media (min-width:550px){
+    .card {
+        text-align: left;
+    }
+}
+.info-card {
+    padding: 10px 20px;
+    color: black;
+}
+.info-card p,
+.card h4 {
+    margin-bottom: 5px;
+}
+
+.info-card .precio span {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.footer {
+    margin-top: 40px;
+    padding-top: 40px;
+    background: #1d2124;
+}
+
+.footer .menu a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+
+
+

@@ -20,8 +20,10 @@ import org.springframework.ui.Model;
 import javax.servlet.http.HttpSession; //----------
 
 @Controller
-public class CatalogoController{
 
+
+
+public class CatalogoController{
     private static final String INDEX="catalogo/index";
     private final ProductoRepository productsData;
     private final ProformaRepository proformaData;
