@@ -1,17 +1,18 @@
 package com.oxiperu.appweb.model;
-import java.util.Date;
-import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Id;
-import javax.persistence.FetchType;
-import javax.persistence.OneToOne;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.JoinColumn;
+import  java.util.Date ;
+import  org.springframework.format.annotation.DateTimeFormat ;
 
-import lombok.*;
+import  javax.persistence.Entity ;
+import  javax.persistence.Table ;
+import  javax.persistence.Id ;
+import  javax.persistence.FetchType ;
+import  javax.persistence.OneToOne ;
+import  javax.persistence.GeneratedValue ;
+import  javax.persistence.GenerationType ;
+import  javax.persistence.JoinColumn ;
+
+import  lombok.*;
 
 @Getter
 @Setter
@@ -20,7 +21,6 @@ import lombok.*;
 @Builder
 @Entity
 @Table(name = "t_customer")
-
 public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,11 +30,48 @@ public class Cliente {
     private String email;
     private String phone; 
     @DateTimeFormat(pattern = "dd/MM/yyyy")
-    private Date birtdate; 
+    private Date birthdate; //-------------------------
     private String gender;
     private String maritalStatus;  
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
-    private Usuario user;  
-       
+    private Usuario user;
+
+    
+    public String getFirstName() {
+        return firstName;
+    }
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    } 
+    public String getMaritalStatus() {
+        return maritalStatus;
+    }
+    public void setMaritalStatus(String maritalStatus) {
+        this.maritalStatus = maritalStatus;
+    }
+    public String getGender() {
+        return gender;
+    }
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+    public String getPhone() {
+        return phone;
+    }
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+    public String getEmail() {
+        return email;
+    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    public String getLastName() {
+        return lastName;
+    }
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }     
 }
