@@ -34,9 +34,5 @@ public class Producto {
 
   
     
-<<<<<<< HEAD
-
-=======
->>>>>>> 01efe8c6d78502109aad941bff3729bf8889acc5
 }
 

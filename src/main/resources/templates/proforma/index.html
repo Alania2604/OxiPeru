@@ -35,14 +35,6 @@
               <td th:text="${proforma.product.descripcion}"></td>
               <td th:text="${proforma.precio}"></td>
               <td>
-<<<<<<< HEAD
-                <input type="number" class="form-control" id="cantidad" 
-                  autocomplete="off" th:value="${proforma.cantidad}"
-                  min="1" max="100"/>
-              </td>
-              <td>
-                <a href="#" class="btn btn-primary">Actualizar</a>
-=======
                 <form th:object="${proforma}" th:action="@{/proforma/update}" method="post">
                   <input type="number" class="form-control" name="cantidad"
                     autocomplete="off" th:value="${proforma.cantidad}"
@@ -50,7 +42,6 @@
                   <input type="hidden" name="id" th:value="${proforma.id}"/>
                   <button th:with="text='Actualizar'" class="btn btn-warning" type="submit" th:text="${text}"/>
                 </form>
->>>>>>> 01efe8c6d78502109aad941bff3729bf8889acc5
               </td>              
             </tr>
           </tbody>
