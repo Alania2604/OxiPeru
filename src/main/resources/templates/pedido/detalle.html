@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 
 <html xmlns:th="https://www.thymeleaf.org" 
-    th:replace="~{fragments/layout :: layout (~{::body},'producto')}">
+    th:replace="~{fragments/layout :: layout (~{::body},'detalle')}">
 
 <head>
-  <title>Producto</title>
+  <title>Pedido</title>
   <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
   <link th:rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css} " />
   <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
@@ -13,37 +13,30 @@
 </head>
 
 <body>
-
+ 
   <div class="container">
     <div class="row">
       <div class="col-lg-10 mt-5 mb-5">
-        <h2>Productos</h2><br/>
-<<<<<<< HEAD
-        <a href="/producto/create">Crear</a>
-=======
-        <a href="/producto/create">Crear Producto</a>
->>>>>>> 01efe8c6d78502109aad941bff3729bf8889acc5
+        <h2>Detalle Pedido</h2><br/>
         <table id="example" class="table table-bordered table-responsive" style="width: 100%">
           <thead>
             <tr>
-              <th>#</th>
-              <th>Descripcion</th>
-              <th>Precio</th>
-              <th>Imagen</th>
+              <center><th>Id</th></center>
+              <center><th>Producto</th></center>
+              <center><th>Precio</th></center>
+              <center><th>Cantidad</th></center>
             </tr>
           </thead>
           <tbody>
-            <tr th:each="producto : ${productos}">
-              <td>
-                <a th:href="@{'/producto/edit/__${producto.id}__'}"
-  			           class="btn btn-info" role="button">Editar</a>
-              </td>
-              <td th:text="${producto.descripcion}"></td>
-              <td th:text="${producto.precio}"></td>
-              <td th:text="${producto.imageFileName}"></td>
+            <tr th:each="detalle : ${detalles}">
+                <td th:text="${detalle.id}"></td>
+                <td th:text="${detalle.product.descripcion}"></td>
+                <td th:text="${detalle.precio}"></td>
+                <td th:text="${detalle.cantidad}"></td>
             </tr>
           </tbody>
         </table>
+        <p th:text="${mensaje}" />
       </div>
     </div>
   </div>

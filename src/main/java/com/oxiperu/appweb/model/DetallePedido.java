@@ -1,15 +1,15 @@
 package com.oxiperu.appweb.model;
 
 import java.math.BigDecimal;
-import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Table;
 import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 import lombok.*;
 
@@ -19,24 +19,18 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "t_product")
+@Table(name = "t_detail_order")
 
-public class Producto {
+public class DetallePedido {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String descripcion;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "producto_id")    
+    private Producto product;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "order_id")    
+    private Pedido pedido;
     private BigDecimal precio;
-    @Temporal(TemporalType.DATE)
-    private Date dueDate; //-------------------------
-    private String imageFileName;
-    private String status;
-
-  
-    
-<<<<<<< HEAD
-
-=======
->>>>>>> 01efe8c6d78502109aad941bff3729bf8889acc5
+    private Integer cantidad;   
 }
-

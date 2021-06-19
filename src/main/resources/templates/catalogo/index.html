@@ -11,15 +11,19 @@
   <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
   <script th:src="@{/webjars/jquery-ui/jquery-ui.min.js}"></script>
   <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+<<<<<<< HEAD
   <link rel="shortcut icon" type="image/x-icon" href="mascarilla.ico">
 
   
 
 
+=======
+>>>>>>> 01efe8c6d78502109aad941bff3729bf8889acc5
 </head>
 
 
 <body>
+<<<<<<< HEAD
 
   <div class="container" >
     <p th:text="${mensaje}" />
@@ -44,6 +48,32 @@
                  <center> <p class="card-text" th:text="${producto.precio}">Price</p></center>
                  <center><a th:href="@{'/catalogo/add/__${producto.id}__'}" 
                       class="btn btn-primary" role="button">Agregar al carrito</a></center> 
+=======
+  <form class="form-inline" th:action="@{/catalogo/index}" method="get">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="searchName">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+  </form>
+  <div class="container">
+    <p th:text="${mensaje}" />
+    <div class="row">
+      <div class="col">
+        <div id="products" class="mb-3">
+          <div class="row">
+            <div th:each="producto : ${productos}" class="col-sm-4">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="card-img-actions">
+                    <center><img class="img-responsive" alt="${producto.descripcion}"  width="110" height="150"
+                      src=" ../../static/resources/catalogo/${producto.imageFileName} "
+                      th:src="@{'../../resources/catalogo/'+${producto.imageFileName}}" /></center>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <center><h5 class="card-title" th:text="${producto.descripcion}">Producto</h5></center>
+                  <center><p class="card-text" th:text="${producto.precio}">Precio</p></center>
+                  <center><a th:href="@{'/catalogo/add/__${producto.id}__'}" 
+                      class="btn btn-warning" role="button">Añadir</a></center>
+>>>>>>> 01efe8c6d78502109aad941bff3729bf8889acc5
                 </div>
               </div>
             </div>
@@ -57,3 +87,7 @@
 </body>
 
 </html>
+
+
+  <!--<img src="/src/main/resources/static/resources/catalogo/img2.jpg" alt="">-->
+

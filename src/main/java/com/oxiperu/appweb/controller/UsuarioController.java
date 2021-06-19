@@ -12,6 +12,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import javax.servlet.http.HttpServletRequest;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 01efe8c6d78502109aad941bff3729bf8889acc5
 @Controller
 public class UsuarioController {
     private static final String INDEX ="usuario/login"; 
@@ -31,7 +35,11 @@ public class UsuarioController {
 
     @PostMapping("/usuario/login")
     public String loginSubmitForm(Model model, 
+<<<<<<< HEAD
     @Valid Usuario objUser, HttpServletRequest request, BindingResult result ){
+=======
+         @Valid Usuario objUser, HttpServletRequest request, BindingResult result ){
+>>>>>>> 01efe8c6d78502109aad941bff3729bf8889acc5
         String page=INDEX;
         model.addAttribute(MODEL_CONTACT, new Usuario());
         if(result.hasFieldErrors()) {
