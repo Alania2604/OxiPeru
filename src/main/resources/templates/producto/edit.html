@@ -34,7 +34,7 @@
               </div>
               <div class="form-group row">
                 <div class="col-sm-2">
-                  <label for="dueDate">Due Date</label>
+                  <label for="dueDate">Caducidad</label>
                 </div>
                 <div class="col-sm-3">
                   <div class="input-group date">
@@ -49,7 +49,7 @@
               </div>
               <div class="form-group row">
                 <div class="col-sm-2">
-                  <label for="imageFileName">File Name</label>
+                  <label for="imageFileName">Nombre de archivo</label>
                 </div>
                 <div class="col-sm-2">
                   <input type="text" th:field="*{imageFileName}" />
@@ -57,21 +57,21 @@
               </div>    
               <div class="form-group row">
                 <div class="col-sm-2">
-                  <label for="status">Status</label>
+                  <label for="status">Estado</label>
                 </div>
                 <div class="col-sm-2">
                   <select id="status" placeholder="status" autocomplete="off" class="form-control"
                     th:field="*{status}">
-                    <option value="-">None</option>
-                    <option value="A">Active</option>
-                    <option value="I">Inactive</option>
+                    <option value="-">Ninguno</option>
+                    <option value="A">Activo</option>
+                    <option value="I">Inactivo</option>
                   </select>
                 </div>
               </div>                        
               <div class="form-group row">
                 <div class="col-sm-2"></div>
                 <div class="col-sm-2">
-                  <button th:with="text='Edit Producto'" class="btn btn-primary" type="submit" th:text="${text}"/>
+                  <button th:with="text='Editar Producto'" class="btn btn-warning" type="submit" th:text="${text}"/>
                 </div>
               </div>
             </form>

@@ -15,13 +15,11 @@ import lombok.*;
 @Builder
 @Entity
 @Table(name = "t_user")
-public class Usuario implements Serializable {
-   
+
+public class Usuario implements Serializable{
     @Id
     @Column(name = "user_id")
-    private String userID;
-    private String password;
-    private String tipoUsuario;
-
-   
+        private String userID;
+        private String password;
+        private String tipoUsuario;
 }

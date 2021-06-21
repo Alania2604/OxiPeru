@@ -37,7 +37,6 @@ public class ClienteController {
         if(result.hasFieldErrors()) {
             model.addAttribute("mensaje", "No se registro un cliente");
         }else{
-        
             Usuario user = objCliente.getUser();
             user.setTipoUsuario("C");
             this.usuariosData.save(user);
