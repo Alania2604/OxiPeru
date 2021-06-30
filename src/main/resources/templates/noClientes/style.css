@@ -1,0 +1,23 @@
+body{
+    background-color: gold;
+
+}
+.user-block{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 3px solid;
+    border-color: black;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 450px;
+    text-align: center;
+    align-self: center;
+  
+}
+.user-block img{
+    width: 250px;
+    height: 250px;
+}
