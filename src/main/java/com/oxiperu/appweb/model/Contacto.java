@@ -31,9 +31,6 @@ public class Contacto {
     @NotNull
     private String reason; 
 
-  
-    
-
     
 }
 
