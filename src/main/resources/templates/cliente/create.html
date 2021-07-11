@@ -5,16 +5,20 @@
 
 <body>
  
-    <div class="container">
+    <div class="modal-dialog">
 
-        <div class="row">
-          <div class="col-sm-10 mt-5">
-            <div class="form-group row">
-              <h1>Cliente</h1>
-            </div>
-            <form th:object="${client}" th:action="@{/cliente/create}" method="post">
+        <div class="modal-content">
+          <div class="col-sm-12 mt-5">
+            <center><div class="col-12">
+              <h1>Registrar</h1>
+            </div></center>
+            <CEnter><div class="col-12">
+              <p>&nbsp;</p>         
+            </div></CEnter>
+            <center><form th:object="${client}" th:action="@{/cliente/create}" method="post">
               <div class="form-group row">
-                <div class="col-sm-2">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-3">
                   <label for="firstName">Nombres</label>
                 </div>
                 <div class="col-sm-2">
@@ -22,7 +26,8 @@
                 </div>
               </div>
               <div class="form-group row">
-                <div class="col-sm-2">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-3">
                   <label for="lastName">Apellidos</label>
                 </div>
                 <div class="col-sm-2">
@@ -30,7 +35,8 @@
                 </div>
               </div>              
               <div class="form-group row">
-                <div class="col-sm-2">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-3">                  
                   <label for="email">Email</label>
                 </div>
                 <div class="col-sm-2">
@@ -39,7 +45,8 @@
                 </div>
               </div>
               <div class="form-group row">
-                <div class="col-sm-2">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-3">
                   <label for="phone">Teléfono</label>
                 </div>
                 <div class="col-sm-2">
@@ -47,10 +54,11 @@
                 </div>
               </div>
               <div class="form-group row">
-                <div class="col-sm-2">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-3">
                   <label for="birthdate">F.Nacimiento</label>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-6">
                   <div class="input-group date">
                     <input type="text" class="form-control" id="birthdate" 
                       data-inputmask="'alias': 'datetime', 'inputFormat': 'dd/mm/yyyy'" 
@@ -62,10 +70,11 @@
                 </div>
               </div>
               <div class="form-group row">
-                <div class="col-sm-2">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-3">
                   <label for="maritalStatus">Estado Civil</label>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-sm-5">
                   <select id="maritalStatus" placeholder="MaritalStatus" autocomplete="off" class="form-control"
                     th:field="*{maritalStatus}">
                     <option value="-">Ninguno</option>
@@ -77,7 +86,7 @@
                 </div>
               </div>
               <div class="form-group row">
-                <div class="col-sm-2"></div>
+                <div class="col-sm-5"></div>
                 <div class="col-sm-2">
                   <div class="custom-control custom-radio custom-control-inline">
                     <input type="radio" id="genderM" name="genderM" class="custom-control-input" value="Male"
@@ -92,7 +101,8 @@
                 </div>
               </div>              
               <div class="form-group row">
-                <div class="col-sm-2">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-3">
                   <label for="user.userID">Usuario</label>
                 </div>
                 <div class="col-sm-2">
@@ -100,7 +110,8 @@
                 </div>
               </div>
               <div class="form-group row">
-                <div class="col-sm-2">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-3">
                   <label for="user.password">Contraseña</label>
                 </div>
                 <div class="col-sm-2">
@@ -108,12 +119,12 @@
                 </div>
               </div>              
               <div class="form-group row">
-                <div class="col-sm-2"></div>
+                <div class="col-sm-4"></div>
                 <div class="col-sm-2">
                   <button th:with="text='Registrar'" class="btn btn-warning btn-lg" type="submit" th:text="${text}"/>
                 </div>
               </div>
-            </form>
+            </form></center>
             <p th:text="${mensaje}" />
           </div>
         </div>
