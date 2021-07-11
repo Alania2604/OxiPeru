@@ -1,5 +1,4 @@
 package com.oxiperu.appweb.controller;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,15 +22,16 @@ public class ProductoController {
     private static String MODEL_PRODUCTO="producto";
     private final ProductoRepository productsData;
     
-
-    public ProductoController(ProductoRepository productsData){
-        this.productsData = productsData;       
-    }      
+    public ProductoController(ProductoRepository productsData
+    ){
+    this.productsData = productsData;
+    
+}      
 
     @GetMapping("/producto/index")
     public String index(Model model){
-        List<Producto> listProducto = this.productsData.findAll();
-        model.addAttribute("productos",listProducto);
+       List<Producto> listProducto = this.productsData.findAll();
+      model.addAttribute("productos",listProducto);
         return VIEW_INDEX;
     }    
 

@@ -13,6 +13,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam; //----------
+
+
+
 import org.springframework.ui.Model;
 import javax.servlet.http.HttpSession; //----------
 
@@ -38,6 +41,7 @@ public class CatalogoController{
         }
         model.addAttribute("productos", listProducto);
         return INDEX;
+
     }
     @GetMapping("/catalogo/add/{id}")
     public String add(@PathVariable("id") Integer id, 

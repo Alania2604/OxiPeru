@@ -30,6 +30,7 @@ public class Proforma {
     private Producto product;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
+   
     private Usuario user;
     private BigDecimal precio;
     private Integer cantidad;

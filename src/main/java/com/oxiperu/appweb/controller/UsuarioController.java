@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import javax.servlet.http.HttpServletRequest;
-
 @Controller
 public class UsuarioController {
     private static final String INDEX ="usuario/login"; 

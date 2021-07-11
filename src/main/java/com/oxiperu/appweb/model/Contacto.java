@@ -1,11 +1,13 @@
 package com.oxiperu.appweb.model;
 
 import javax.validation.constraints.NotNull;
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+
 import lombok.*;
 
 @Getter
@@ -15,8 +17,8 @@ import lombok.*;
 @Builder
 @Entity
 @Table(name = "t_contact")
-
-public class Contacto{
+public class Contacto {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
@@ -31,4 +33,4 @@ public class Contacto{
 
     
 }
-   
+
