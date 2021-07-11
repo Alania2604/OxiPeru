@@ -21,11 +21,5 @@ import lombok.*;
 @Table(name = "t_order")
 
 public class Pedido {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-    @DateTimeFormat(pattern = "dd/MM/yyyy")
-    private Date orderDate; 
-    private Integer clienteId;
-    private BigDecimal montoTotal;
+   
 }
