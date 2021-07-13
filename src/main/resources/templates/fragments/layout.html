@@ -15,7 +15,7 @@
   <link th:rel="stylesheet" th:href="@{/webjars/bootstrap-datepicker/css/bootstrap-datepicker.standalone.css}" />
 
 </head>
-<body>
+<body background="https://www.nationwidesecuritycorp.com/wp-content/uploads/2020/08/hospital-min.jpg" style="background-size: 100%; height: 90%;">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">OxiPeru</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,7 +36,7 @@
         <th:block th:if="${session.user!=null}">  
           <li class="nav-item">
             <a class="nav-link" href="/producto/index">Producto</a>
-          </li>     
+          </li>      
           <li class="nav-item">
             <a class="nav-link" href="/proforma/index">Carrito</a>
           </li>  
@@ -44,6 +44,7 @@
             <a class="nav-link" href="/pedido/index">Pedido</a>
           </li>
         </th:block>
+        
         
       </ul>
       <ul class="nav navbar-nav navbar-right">
