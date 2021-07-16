@@ -2,19 +2,6 @@
 
 <html xmlns:th="https://www.thymeleaf.org" 
     th:replace="~{fragments/layout :: layout (~{::body},'login')}">
-<<<<<<< HEAD
-
-<body>
-    <center>
-    <div class="container" style="background-color: white; width: 40%; padding-top: 40px;" >
-        
-        <div class="row">
-          <div class="col-sm-10 mt-5">
-         <center>   <div class="form-group row" align="center"></center>
-           ><h1>Iniciar Sesión</h1>              
-            </div>
-            <form th:object="${user}" th:action="@{/usuario/login}" method="post">
-=======
     <!--<head><link th:rel="stylesheet" th:href="@{/resources/css/w3.css}" /></head>-->
     <body>
       <CEnter><div class="col-12">
@@ -33,7 +20,6 @@
               <p>&nbsp;</p>         
             </div></CEnter>
             <center><form th:object="${user}" th:action="@{/usuario/login}" method="post">
->>>>>>> bbe30172e155b714512fbc568048a401a26cc7a3
               <div class="form-group row">
                 <div class="col-sm-2"></div>
                 <div class="col-sm-3">
