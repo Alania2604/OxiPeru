@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-//import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PathVariable;
 
-//import com.oxiperu.appweb.model.Producto;
+import com.oxiperu.appweb.model.Producto;
 import com.oxiperu.appweb.model.Proforma;
 import com.oxiperu.appweb.model.Usuario;
 import com.oxiperu.appweb.repository.ProformaRepository;
@@ -20,7 +20,7 @@ import java.util.List;
 @Controller
 public class ProformaController {
     private static final String VIEW_INDEX ="proforma/index";
-    //private static String MODEL_PRODUCTO="proforma";
+    private static String MODEL_PRODUCTO="proforma";
     private final ProformaRepository proformaData;
     
     public ProformaController(ProformaRepository proformaData
