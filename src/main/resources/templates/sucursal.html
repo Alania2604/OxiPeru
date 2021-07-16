@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html xmlns:th="https://www.thymeleaf.org" 
+    th:replace="~{fragments/layout :: layout (~{::body},'sucursal')}">
+<head>   
+    <!--<link rel="stylesheet" href="WEB/css/skeleton.css">-->
+    <link th:rel="stylesheet" th:href="@{/resources/css/estilos.css}" />
+    <!--<link rel="stylesheet" href="WEB/css/normalize.css">-->
+</head>
+
+<body>   
+      <div class="container">
+        <p th:text="${mensaje}" />
+        <div class="row">
+          <div class="col">  
+                    
+                  <div class="card mb-5">
+                    <div class="card-body">
+                      <div class="card-img-actions">
+                        <center><img class="img-responsive"  src="../static/resources/images/tienda1.jpg" th:src="@{/resources/images/tienda1.jpg}"width="100%" height="100%"></center>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <center><h5 class="card-title">Tienda 1</h5></center>
+                      <center><p class="card-text">Oxigenonarva</p></center>
+                      <center><a class="btn btn-warning" href="/catalogo/index" role="button">ir a la Tienda</a></center>
+                    </div>
+                  </div>      
+                  <div class="card mb-5">
+                    <div class="card-body">
+                      <div class="card-img-actions">
+                        <center><img class="img-responsive"  src="../static/resources/images/tienda2.jpg" th:src="@{/resources/images/tienda2.jpg}"width="100%" height="100%"></center>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <center><h5 class="card-title">Tienda 2</h5></center>
+                      <center><p class="card-text">Alfersac</p></center>
+                      <center><a class="btn btn-warning" href="/catalogo/index" role="button">ir a la Tienda</a></center>
+                    </div>
+                  </div>  
+                  <div class="card mb-5">
+                    <div class="card-body">
+                      <div class="card-img-actions">
+                        <center><img class="img-responsive"  src="../static/resources/images/tienda3.jpg" th:src="@{/resources/images/tienda3.jpg}"width="100%" height="100%"></center>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <center><h5 class="card-title">Tienda 3</h5></center>
+                      <center><p class="card-text">Alquimedic</p></center>
+                      <center><a class="btn btn-warning" href="/catalogo/index" role="button">ir a la Tienda</a></center>
+                    </div>
+                  </div>  
+                  <div class="card mb-5">
+                    <div class="card-body">
+                      <div class="card-img-actions">
+                        <center><img class="img-responsive"  src="../static/resources/images/tienda5.jpg" th:src="@{/resources/images/tienda5.jpg}"width="100%" height="100%"></center>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <center><h5 class="card-title">Tienda 4</h5></center>
+                      <center><p class="card-text">Aranda</p></center>
+                      <center><a class="btn btn-warning" href="/catalogo/index" role="button">ir a la Tienda</a></center>
+                    </div>
+                  </div> 
+                  <div class="card mb-5">
+                    <div class="card-body">
+                      <div class="card-img-actions">
+                        <center><img class="img-responsive"  src="../static/resources/images/tienda6.jpg" th:src="@{/resources/images/tienda6.jpg}"width="100%" height="100%"></center>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <center><h5 class="card-title">Tienda 5</h5></center>
+                      <center><p class="card-text">Cxybarika</p></center>
+                      <center><a class="btn btn-warning" href="/catalogo/index" role="button">ir a la Tienda</a></center>
+                    </div>
+                  </div>  
+                  <div class="card mb-3">
+                    <div class="card-body">
+                      <div class="card-img-actions">
+                        <center><img class="img-responsive"  src="../static/resources/images/tienda7.jpg" th:src="@{/resources/images/tienda7.jpg}"width="100%" height="100%"></center>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <center><h5 class="card-title">Tienda 6</h5></center>
+                      <center><p class="card-text">Cima</p></center>
+                      <center><a class="btn btn-warning" href="/catalogo/index" role="button">ir a la Tienda</a></center>
+                    </div>
+                  </div>   
+                             
+          </div>
+        </div>
+      </div>
+</body>

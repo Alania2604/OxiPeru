@@ -2,6 +2,7 @@
 
 <html xmlns:th="https://www.thymeleaf.org" 
     th:replace="~{fragments/layout :: layout (~{::body},'login')}">
+<<<<<<< HEAD
 
 <body>
     <center>
@@ -13,33 +14,59 @@
            ><h1>Iniciar Sesión</h1>              
             </div>
             <form th:object="${user}" th:action="@{/usuario/login}" method="post">
+=======
+    <!--<head><link th:rel="stylesheet" th:href="@{/resources/css/w3.css}" /></head>-->
+    <body>
+      <CEnter><div class="col-12">
+        <p>&nbsp;</p>         
+      </div></CEnter>
+      <CEnter><div class="col-12">
+        <p>&nbsp;</p>         
+      </div></CEnter>
+    <div class="modal-dialog ">       
+        <div class="modal-content">
+          <div class="col-sm-12 mt-5">
+            <CEnter><div class="col-12">
+              <h1>Iniciar Sesión</h1>           
+            </div></CEnter>
+            <CEnter><div class="col-12">
+              <p>&nbsp;</p>         
+            </div></CEnter>
+            <center><form th:object="${user}" th:action="@{/usuario/login}" method="post">
+>>>>>>> bbe30172e155b714512fbc568048a401a26cc7a3
               <div class="form-group row">
-                <div class="col-sm-2">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-3">
                   <label for="userID">Usuario</label>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-sm-3">
                   <input type="text" th:field="*{userID}" />
                 </div>
               </div>
               <div class="form-group row">
-                <div class="col-sm-2">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-3">
                   <label for="password">Contraseña</label>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-sm-3">
                   <input type="password" th:field="*{password}" />
                 </div>
-              </div>              
+              </div>  
+              <CEnter><div class="col-12">
+                <p>&nbsp;</p>         
+              </div></CEnter>            
               <div class="form-group row">
-                <div class="col-sm-2"></div>
+                <div class="col-sm-4"></div>
                 <div class="col-sm-2">
                   <button th:with="text='Ingresar'" class="btn btn-warning btn-lg"  type="submit"   th:text="${text}"/>
                 </div>
               </div>
-            </form>
+            </form></center>
             <p th:text="${mensaje}" />
           </div>
         </div>
       </div>
+ 
     
       <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
       <script th:src="@{/webjars/jquery-ui/jquery-ui.min.js}"></script>

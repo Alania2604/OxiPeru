@@ -28,7 +28,12 @@ public class ProformaController {
         this.proformaData = proformaData;
     }      
 
-    
+    public static String getMODEL_PRODUCTO() {
+        return MODEL_PRODUCTO;
+    }
+    public static void setMODEL_PRODUCTO(String mODEL_PRODUCTO) {
+        MODEL_PRODUCTO = mODEL_PRODUCTO;
+    }
 
     @GetMapping("/proforma/index")
     public String index(Model model, HttpSession session){

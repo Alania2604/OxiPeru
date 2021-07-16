@@ -3,7 +3,7 @@
       "precio": 500,
       "id": 1,
       "title": "Balon de Oxigeno 1",
-      "fig": "/Oxiperu/src/public/img1.jpg"
+      "fig": "/src/public/img1.jpg"
     },
     {
       "precio": 300,

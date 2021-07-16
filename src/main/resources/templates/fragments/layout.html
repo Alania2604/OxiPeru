@@ -26,30 +26,31 @@
         <li class="nav-item active">
           <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/contacto/create">Contactanos</a>
+        <!----> 
+          <li class="nav-item">
+          <a class="nav-link text-primary" href="/contacto/create">Contactanos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/catalogo/index">Catálogo</a>
-        </li>             
-        <th:block th:if="${session.user!=null}">
+          <a class="nav-link text-primary" href="/sucursal">Tiendas</a>
+        </li>              
+        <th:block th:if="${session.user!=null}">  
           <li class="nav-item">
-            <a class="nav-link" href="/producto/index">Producto</a>
-          </li>
+            <a class="nav-link text-primary" href="/producto/index">Producto</a>
+          </li>      
           <li class="nav-item">
-            <a class="nav-link" href="/proforma/index">Carrito</a>
+            <a class="nav-link text-primary" href="/proforma/index">Carrito</a>
           </li>  
           <li class="nav-item">
-            <a class="nav-link" href="/pedido/index">Pedido</a>
-          </li> 
-                     
+            <a class="nav-link text-primary" href="/pedido/index">Pedido</a>
+          </li>
         </th:block>
+        
         
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <th:block th:if="${session.user==null}">
           <li class="nav-item"><a class="nav-link" href="/cliente/create"><span class="glyphicon glyphicon-user"></span>Registrar</a></li>
-          <li class="nav-item"><a class="nav-link" href="/usuario/login"><span class="glyphicon glyphicon-log-in"></span>Ingresar</a></li>
+          <li class="nav-item"><a class="nav-link text-success" href="/usuario/login"><span class="glyphicon glyphicon-log-in"></span>Ingresar</a></li>
         </th:block>   
         <th:block th:if="${session.user!=null}">
           <li><a href="/usuario/logout"><span class="glyphicon glyphicon-log-in"></span>Salir</a></li>
