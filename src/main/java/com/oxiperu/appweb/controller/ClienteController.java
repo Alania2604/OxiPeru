@@ -43,7 +43,7 @@ public class ClienteController {
             this.usuariosData.flush();
             this.clientsData.save(objCliente);
             model.addAttribute(MODEL_CONTACT, objCliente);
-            model.addAttribute("mensaje", "Se registro un cliente");
+            model.addAttribute("mensaje", "Tu registro se completó exitosamente!!!");
         }
         return INDEX;
     }

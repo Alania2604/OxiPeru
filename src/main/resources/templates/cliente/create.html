@@ -7,7 +7,7 @@
  
     <div class="modal-dialog">
 
-        <div class="modal-content">
+        <div class="modal-content" style="box-shadow: 7px 7px 5px #aaaaaa;">
           <div class="col-sm-12 mt-5">
             <center><div class="col-12">
               <h1>Registrarse</h1>
@@ -15,7 +15,7 @@
             <CEnter><div class="col-12">
               <p>&nbsp;</p>         
             </div></CEnter>
-            <center><form th:object="${client}" th:action="@{/cliente/create}" method="post">
+            <center><form th:object="${client}" th:action="@{/cliente/create}" method="post" style="padding-bottom: 40px;">
               <div class="form-group row">
                 <div class="col-sm-2"></div>
                 <div class="col-sm-3">
@@ -121,13 +121,18 @@
               <div class="form-group row">
                 <div class="col-sm-4"></div>
                 <div class="col-sm-2">
-                  <button th:with="text='Registrar'" class="btn btn-warning btn-lg" type="submit" th:text="${text}"/>
+                <center><a href="javascript:abrir()" role="button"><button th:with="text='Registrar'" class="btn btn-warning btn-lg" type="submit" th:text="${text}" style="width: 270px; border-radius: 16px; margin-top: 70px;margin-left: -50px;"/></a> </center> 
                 </div>
               </div>
             </form></center>
             <p th:text="${mensaje}" />
           </div>
         </div>
+      </div>
+      <div  class="ventana" id="vent" style="background: white;width: 30%;color: black;text-align: center; padding: 33px;min-height: 250px;position: absolute;left: 34%;top: 35%;display: none;">
+          <div id="cerrar"><input type="submit"></div>
+        Su registro fue exitoso
+
       </div>
     
       <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
@@ -143,6 +148,14 @@
       </script>
       <script>
         $(":input").inputmask();
+      </script>
+      <script>
+        function abrir(){
+          document.getElementById("vent").style.display="block";
+        }
+        function cerrar(){
+          document.getElementById("vent").style.display="none";
+        }
       </script>
 </body>
 
